@@ -1,33 +1,53 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import './components/Navbar.jsx'
 import './App.css'
+import './components/Modal.css'
+import Navbar from './components/Navbar.jsx'
+import Cart from './components/Cart.jsx'
+import  List from './components/List.jsx'
+import Fav from './components/Fav.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cartItems, setCartItems] = useState([]);
+  const [favItems, setfavItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isFavOpen,setIsFavOpen]=useState(false);
+  const openCart = () => {
+    setIsCartOpen(true);
+  };
+
+  const closeCart = () => {
+    setIsCartOpen(false);
+  };
+
+  const removeFromCart = (productId) => {
+    setCartItems(cartItems.filter((item) => item.id !== productId));
+  };
+  const openFav = () => {
+    setIsFavOpen(true);
+  };
+
+  const closeFav = () => {
+    setIsFavOpen(false);
+  };
+  const removeFromFav = (productId) => {
+    setfavItems(favItems.filter((item) => item.id !== productId));
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar cartCount={cartItems.length} openCart={openCart} openFav={openFav}/>
+      {
+            isCartOpen && (
+              <Cart cartItems={cartItems} closeCart={closeCart} removeFromCart={removeFromCart} />
+            )
+      }
+      {
+            isFavOpen && (
+              <Fav favItems={favItems} closeFav={closeFav} removeFromFav={removeFromFav} />
+            )
+      }
+      <List cartItems={cartItems} setCartItems={setCartItems} favItems={favItems} setfavItems={setfavItems}/>
     </>
   )
 }
