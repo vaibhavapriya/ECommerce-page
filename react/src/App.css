@@ -1,19 +1,27 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1282px;
+  width: 100vw;
+  margin: 0 ;
   padding: 0;
   text-align: center;
 }
-
 button{
   color: #00a6ff;
+}
+h1{
+  color: #edfdff;
 }
 .icon{
   color: #00a6ff;
   size: 100px;
+  margin-left: 20px;
 }
 .logo {
-  background-image: url(ECommerce-page\react\src\components\heart-solid.svg);
+  /* background-image: url(ECommerce-page\react\src\components\heart-solid.svg); */
+  height: 30px;
+  width: 30px;
+  color: #00a6ff;
+  margin: 20px;
 }
 /* .container{
   display: flex;
@@ -26,6 +34,12 @@ button{
   align-items: center;
   justify-content: center;
 } */
+ .hhead{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+ }
 .head{
   width: 100%;
   display: flex;
@@ -48,6 +62,7 @@ button{
   grid-gap: 10px;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
 .card{
   width: 100%;
@@ -74,6 +89,14 @@ button{
   flex-direction: row;
   justify-content: space-between;
 }
+.mmodal{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
 .modal{
   background-color: beige;
   position:fixed ;
@@ -81,16 +104,19 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  padding: 10px;
+  min-width: 60vw;
 }
 .mitem{
   width: 100%;
   display: flex;
-  flex-direction:row;
-  max-height: 30px;
+  flex-direction:column;
+  padding: 10px;
+  justify-content: space-between;
+  max-width: 93vw;
 }
 .mimg{
-  height: 30px;
+  height: 50px;
   width: auto;
 }
 @media only screen and (min-width: 600px) {
@@ -101,9 +127,24 @@ button{
     align-items: center;
     justify-content: center;
   }
+  .head{
+    padding: 40px;
+  }
   h1{
     font-size: 40px; 
   } 
+  .mitem{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    max-height: 30px;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  .mimg{
+    height: 50px;
+    width: auto;
+  }
 }
 @media only screen and (min-width: 1001px) {
   .items{

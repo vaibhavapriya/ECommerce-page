@@ -1,4 +1,6 @@
 import React , { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart} from "@fortawesome/free-solid-svg-icons";
 
 function List({cartItems, setCartItems,favItems, setfavItems}) {
     const [products, setProducts] = useState([]);//useEffect
@@ -37,7 +39,7 @@ function List({cartItems, setCartItems,favItems, setfavItems}) {
                     <p className='price'>₹{product.price}</p>
                     <div className='but'>
                         <button onClick={() => addcart(product)} className=''>Add to Cart</button>
-                        <button onClick={() => fav(product)} className=''>Favorite</button>
+                        <button onClick={() => fav(product)} className=''><FontAwesomeIcon icon={faHeart} /></button>
                     </div>   
                 </div>
                 
