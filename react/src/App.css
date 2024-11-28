@@ -9,7 +9,7 @@ button{
   color: #00a6ff;
 }
 h1{
-  color: #edfdff;
+  color: #00a6ff;
 }
 .icon{
   color: #00a6ff;
@@ -46,7 +46,7 @@ h1{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #00a6ff;
+  /* background-color: #00a6ff; */
   padding: 20px;
   gap: 20px;
 }
