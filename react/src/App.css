@@ -1,42 +1,116 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
+button{
+  color: #00a6ff;
+}
+.icon{
+  color: #00a6ff;
+  size: 100px;
+}
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  background-image: url(ECommerce-page\react\src\components\heart-solid.svg);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* .container{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #000;
+  align-items: center;
+  justify-content: center;
+} */
+.head{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00a6ff;
+  padding: 20px;
+  gap: 20px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.display{
+  display: flex;
+  grid-row: 20px;
+  grid-column: auto;
+  width: auto;
 }
+.items{
+  display: grid;
+  grid-template-columns: 80%;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  padding: 20px;
+  height: 600px;
+  justify-content: space-between;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.item div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+}
+.img{
+  width: 100%;
+  height: 290px;
+}
+.but{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal{
+  background-color: beige;
+  position:fixed ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+}
+.mitem{
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  max-height: 30px;
+}
+.mimg{
+  height: 30px;
+  width: auto;
+}
+@media only screen and (min-width: 600px) {
+  .items{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  h1{
+    font-size: 40px; 
+  } 
+}
+@media only screen and (min-width: 1001px) {
+  .items{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

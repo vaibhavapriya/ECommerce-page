@@ -1,21 +1,21 @@
 import React from 'react'
 
-function Navbar({openCart, cartCount,openFav}) {
+function Navbar({openCart, cartCount,openFav,logo}) {
   return (
     <div className="head">
-            <h1>
-                <div>name</div>
-                <div>
+
+                <div>shoppers</div>
+                {/* <div>
                     <form>
                         <input></input>
                         <button>Search</button>
                     </form>
-                </div>
+                </div> */}
                 <div>
                     <button onClick={openCart} >cart :{cartCount}</button>
-                    <button onClick={openFav}>fav</button>
+                    <button onClick={openFav} className='icon'><img src={logo}></img></button>
                 </div>
-            </h1>
+            
     </div>
   )
 }

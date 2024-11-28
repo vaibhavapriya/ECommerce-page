@@ -6,6 +6,8 @@ import Navbar from './components/Navbar.jsx'
 import Cart from './components/Cart.jsx'
 import  List from './components/List.jsx'
 import Fav from './components/Fav.jsx'
+import logo from './components/heart-solid.svg'
+
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -36,7 +38,7 @@ function App() {
 
   return (
     <>
-      <Navbar cartCount={cartItems.length} openCart={openCart} openFav={openFav}/>
+      <Navbar cartCount={cartItems.length} openCart={openCart} openFav={openFav} logo={logo}/>
       {
             isCartOpen && (
               <Cart cartItems={cartItems} closeCart={closeCart} removeFromCart={removeFromCart} />

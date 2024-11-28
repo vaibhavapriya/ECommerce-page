@@ -28,7 +28,7 @@ function List({cartItems, setCartItems,favItems, setfavItems}) {
     }
 
   return (
-    <div>List
+    <div>
         <div className='items'>
             {products.map((product) => (
                 <div key={product.id} className='card'>
