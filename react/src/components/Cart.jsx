@@ -5,7 +5,7 @@ function Cart({ closeCart, cartItems, removeFromCart }) {
   return (
     <div className='mmodal'>
             <div className='modal'>
-                <button onClick={closeCart} className=''>X</button>
+                <button onClick={closeCart} className='close'>X</button>
                 <h2 className=''>Your Cart</h2>
                 {cartItems.length > 0 ? (
                     <div  className=''>

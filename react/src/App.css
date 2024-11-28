@@ -1,5 +1,4 @@
 #root {
-  max-width: 1282px;
   width: 100vw;
   margin: 0 ;
   padding: 0;
@@ -59,7 +58,7 @@ h1{
 .items{
   display: grid;
   grid-template-columns: 80%;
-  grid-gap: 10px;
+  grid-gap: 20px;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
@@ -68,7 +67,6 @@ h1{
   width: 100%;
   display: flex;
   flex-direction:column;
-  padding: 20px;
   height: 600px;
   justify-content: space-between;
 
@@ -119,6 +117,17 @@ h1{
   height: 50px;
   width: auto;
 }
+.close{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: beige;
+  border: 0;
+}
+.close:focus,
+.close:focus-visible {
+  outline: 0;
+}
 @media only screen and (min-width: 600px) {
   .items{
     display: grid;
@@ -137,8 +146,7 @@ h1{
     width: 100%;
     display: flex;
     flex-direction:row;
-    max-height: 30px;
-    padding: 10px;
+    padding: 20px;
     justify-content: space-between;
   }
   .mimg{
@@ -150,7 +158,7 @@ h1{
   .items{
     display: grid;
     grid-template-columns: 25% 25% 25%;
-    grid-gap: 10px;
+    grid-gap: 20px;
     align-items: center;
     justify-content: center;
   }
