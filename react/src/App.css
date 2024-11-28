@@ -69,7 +69,9 @@ h1{
   flex-direction:column;
   height: 600px;
   justify-content: space-between;
-
+  background-color: aliceblue;
+  padding: 15px;
+  border-radius: 5px;
 }
 .item div{
   display: flex;
@@ -152,6 +154,10 @@ h1{
   .mimg{
     height: 50px;
     width: auto;
+  }
+  .card{
+    padding: 5px;
+    border-radius: 5px;
   }
 }
 @media only screen and (min-width: 1001px) {
